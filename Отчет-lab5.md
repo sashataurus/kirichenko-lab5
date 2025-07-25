@@ -77,13 +77,55 @@
 
 ## Автоматизация проверки формата файлов при коммите
 
-Создаем bash-скрипт `pre-commit`, который выполняет проверку формата `.txt` файлов:
+Создаем bash-скрипт `check_format.sh`, который выполняет проверку формата `.txt` файлов:
 
-![telegram-cloud-photo-size-2-5190625139115556307-x](https://github.com/user-attachments/assets/c15c969e-c031-4b9f-963a-ae73168aa4cd)
+![2025-07-26 01 14 54](https://github.com/user-attachments/assets/fe6ac660-3923-48ea-8a06-53b35d08bab9)
 
-описание скрипта
+Строка 3: Выводит список файлов, которые были добавлены в индекс для следующего коммита
 
-Добавляем его в папку `.git/hooks`.
+Строка 4: Проверяет, является ли файл `.txt` файлом
 
+Строка 5: Если файл не заканчивается на `.txt`, то выводится сообщение
 
+Добавляем его в папку `.git/hooks` и проверяем права на выполнение. Теперь после коммита автоматически производится проверка файла:
 
+![2025-07-25 21 35 11](https://github.com/user-attachments/assets/bae5f591-de92-439c-b244-5140da79975b)
+
+## Использование Git Flow в проекте
+
+Проверяем наличие Git Flow и выполняем инициализацию:
+
+![2025-07-26 00 29 24](https://github.com/user-attachments/assets/a6cd7a74-d953-4133-b4f6-244ff07765a5)
+
+Понадобилось создать ветку `develop`:
+
+![2025-07-26 00 28 56](https://github.com/user-attachments/assets/c918b472-b17b-4c0f-bdf3-1ef55ae04bc0)
+
+Также создаем ветку `task-management`:
+
+![2025-07-26 00 34 14](https://github.com/user-attachments/assets/529b26cc-e6ba-4c7f-8e7d-1a57b1edc808)
+
+Открываем файл `task_manager.py` и добавляем туда код для добавления функционала управления задачами:
+
+![2025-07-26 00 34 43](https://github.com/user-attachments/assets/6680372d-846e-4452-821c-41f0861463d8)
+
+После коммита создаем релиз на ветке `develop`. Сначала у меня возникли проблемы, и я попробовала второй раз, назвав релиз `v2.0.0`:
+
+![telegram-cloud-photo-size-2-5197695630242349385-y](https://github.com/user-attachments/assets/75ea6767-0d2c-4b83-a14f-e754af61a790)
+
+Вносим изменения, связанные с ним, в файле `version2.txt`:
+
+![telegram-cloud-photo-size-2-5197695630242349387-y](https://github.com/user-attachments/assets/857f49ac-ffde-4b84-9a5a-aad59cbb101f)
+
+Завершаем релиз, критической ошибки не выявлено:
+
+![telegram-cloud-photo-size-2-5197695630242349388-y](https://github.com/user-attachments/assets/095b3aad-7cf7-41c0-85d0-a0893789ede0)
+![telegram-cloud-photo-size-2-5197695630242349384-y](https://github.com/user-attachments/assets/ca252e4c-4e42-4385-8c69-70f6259890de)
+
+Остается только завершить работу и отправить изменения на удаленный репозиторий:
+
+![telegram-cloud-photo-size-2-5197695630242349389-y](https://github.com/user-attachments/assets/8b760b9a-0cc5-4fbf-95ca-53f24b4b2aed)
+
+Видим, что на GitHub всё успешно:
+
+![telegram-cloud-photo-size-2-5197695630242349396-y](https://github.com/user-attachments/assets/396e1204-e099-4000-86d6-fba4e5516fad)
