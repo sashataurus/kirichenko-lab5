@@ -31,7 +31,7 @@
 
 ![telegram-cloud-photo-size-2-5190625139115556143-x](https://github.com/user-attachments/assets/a021504c-39fe-417e-9230-c9c03a8f6e55)
 
-Затем создаю новую ветку `feature-login`:
+Затем создаем новую ветку `feature-login`:
 
 ![2025-07-25 19 39 56](https://github.com/user-attachments/assets/740dfe49-8703-4f02-bcc1-8a96b05e3eee)
 
